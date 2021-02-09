@@ -1,6 +1,10 @@
 <map id="bits/result.h" name="bits/result.h">
-<area shape="rect" id="node2" href="$module_8h.html" title="This file defines functions to load the optional modules available. " alt="" coords="5,80,105,107"/>
-<area shape="rect" id="node3" href="$enclave_8h.html" title="This file defines the programming interface for developing enclaves. " alt="" coords="104,155,183,181"/>
-<area shape="rect" id="node4" href="$properties_8h.html" title="This file defines the properties for an enclave. " alt="" coords="181,80,295,107"/>
-<area shape="rect" id="node5" href="$host_8h.html" title="This file defines the programming interface for developing host applications. " alt="" coords="319,80,378,107"/>
+<area shape="rect" id="node2" href="$module_8h.html" title="This file defines functions to load the optional modules available. " alt="" coords="5,87,105,114"/>
+<area shape="rect" id="node3" href="$enclave_8h.html" title="This file defines the programming interface for developing enclaves. " alt="" coords="104,169,183,196"/>
+<area shape="rect" id="node5" href="$properties_8h.html" title="This file defines the properties for an enclave. " alt="" coords="181,87,295,114"/>
+<area shape="rect" id="node6" href="$host_8h.html" title="This file defines the programming interface for developing host applications. " alt="" coords="319,87,378,114"/>
+<area shape="rect" id="node7" href="$attester_8h.html" title="This file defines the programming interface for application enclaves to access the OE SDK attester fu..." alt="" coords="403,87,545,114"/>
+<area shape="rect" id="node8" href="$custom__claims_8h.html" title="This file defines the programming interface for application software to access the OE SDK attestation..." alt="" coords="570,80,701,121"/>
+<area shape="rect" id="node9" href="$verifier_8h.html" title="This file defines the programming interface for application software to access OE SDK verifier functi..." alt="" coords="725,87,863,114"/>
+<area shape="rect" id="node4" href="$ert_8h.html" title="ert.h" alt="" coords="119,244,167,271"/>
 </map>

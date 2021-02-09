@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Edgeless RT
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
   </td>
  </tr>
@@ -230,7 +230,12 @@ $(function() {
 <tr><td class="fieldname"><a id="a082933eedd558d91d480c569fa8d1a48adb165f5931fd018846da6e14a6dbcb98"></a>OE_QUOTE_HASH_MISMATCH&#160;</td><td class="fielddoc"><p>The hash of claims section in the quote does not match the hash value held in the report_data field. </p>
 <p>This occurs when claims are tampered. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a082933eedd558d91d480c569fa8d1a48a5f503dd9cf4f09c0839f94be45dd6e60"></a>OE_TIMEDOUT&#160;</td><td class="fielddoc"><p>A timeout occurred. </p>
+<tr><td class="fieldname"><a id="a082933eedd558d91d480c569fa8d1a48a3466618eae21b236f74a3e545fd087bd"></a>OE_INVALID_SGX_SIGNING_KEY&#160;</td><td class="fielddoc"><p>The signing key provided cannot be used for SGX signing. </p>
+<p>This is usually because the key is not an 3084-bit RSA key with exponent 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a082933eedd558d91d480c569fa8d1a48ac4a3182fead4b82215717868bf20bafa"></a>OE_INVALID_IMAGE&#160;</td><td class="fielddoc"><p>The binary image being loaded into the enclave could not be parsed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a082933eedd558d91d480c569fa8d1a48a247e9cbf316f2abcb8db87a02ecb1b26"></a>OE_QUOTE_LIBRARY_LOAD_ERROR&#160;</td><td class="fielddoc"><p>Failed to load the quote library used for quote generation and attestation. </p>
 </td></tr>
 </table>
 

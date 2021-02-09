@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Edgeless RT
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
   </td>
  </tr>
@@ -142,7 +142,7 @@ $(function() {
 </div><div class="memdoc">
 
 <p>oe_verify_attestation_certificate </p>
-<p>This function perform a custom validation on the input certificate. This validation includes extracting an attestation evidence extension from the certificate before validating this evidence. An optional enclave_identity_callback could be passed in for a calling client to further validate the identity of the enclave creating the quote. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This function perform a custom validation on the input certificate. This validation includes extracting an attestation evidence extension from the certificate before validating this evidence. An optional enclave_identity_callback could be passed in for a calling client to further validate the identity of the enclave creating the quote. OE_FAILURE is returned if the expected certificate extension OID is not found. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">cert_in_der</td><td>a pointer to buffer holding certificate contents in DER format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cert_in_der_len</td><td>size of certificate buffer above </td></tr>

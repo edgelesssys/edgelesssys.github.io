@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Edgeless RT
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
   </td>
  </tr>
@@ -81,7 +81,7 @@ $(function() {
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;bits/defs.h&quot;</code><br />
 <code>#include &quot;bits/eeid.h&quot;</code><br />
-<code>#include &quot;bits/evidence.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="bits_2evidence_8h_source.html">bits/evidence.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="result_8h_source.html">bits/result.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">bits/types.h</a>&quot;</code><br />
 <code>#include &quot;host_verify.h&quot;</code><br />
@@ -90,8 +90,10 @@ Include dependency graph for host.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="host_8h__incl.png" border="0" usemap="#host_8h" alt=""/></div>
 <map name="host_8h" id="host_8h">
-<area shape="rect" id="node12" href="result_8h.html" title="This file defines Open Enclave return codes (results). " alt="" coords="1077,95,1167,121"/>
-<area shape="rect" id="node14" href="types_8h.html" title="This file defines the types used by the OE SDK. " alt="" coords="1160,184,1225,211"/>
+<area shape="rect" id="node11" href="bits_2evidence_8h.html" title="This file defines structures and options for SGX evidence generation and verification. " alt="" coords="992,102,1103,129"/>
+<area shape="rect" id="node13" href="report_8h.html" title="This file defines structures and options passed to oe_get_report functions. " alt="" coords="986,199,1053,225"/>
+<area shape="rect" id="node14" href="types_8h.html" title="This file defines the types used by the OE SDK. " alt="" coords="1057,273,1123,300"/>
+<area shape="rect" id="node15" href="result_8h.html" title="This file defines Open Enclave return codes (results). " alt="" coords="1178,199,1269,225"/>
 </map>
 </div>
 </div>
@@ -104,6 +106,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__oe__enclave__setting.html">_oe_enclave_setting</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The uniform structure type containing a specific type of enclave setting.  <a href="struct__oe__enclave__setting.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__oe__ecall__info__t.html">_oe_ecall_info_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure describing an ecall.  <a href="struct__oe__ecall__info__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -128,6 +133,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a2718e9ec792f4275da80c07e9393af05"><td class="memItemLeft" align="right" valign="top"><a id="a2718e9ec792f4275da80c07e9393af05"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>strncat_s</b>(destination,  destination_size,  source,  source_size)&#160;&#160;&#160;strncat(destination, source, source_size)</td></tr>
 <tr class="separator:a2718e9ec792f4275da80c07e9393af05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf414d57aca6d420aafa9153668441f"><td class="memItemLeft" align="right" valign="top"><a id="adcf414d57aca6d420aafa9153668441f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>fopen_s</b>(pfp,  name,  mode)&#160;&#160;&#160;*(pfp) = fopen((name), (mode))</td></tr>
+<tr class="separator:adcf414d57aca6d420aafa9153668441f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121289284f9d397e326b13a012871a86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h_a121289284f9d397e326b13a012871a86.html#a121289284f9d397e326b13a012871a86">OE_ENCLAVE_FLAG_DEBUG</a>&#160;&#160;&#160;0x00000001u</td></tr>
 <tr class="memdesc:a121289284f9d397e326b13a012871a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag passed into oe_create_enclave to run the enclave in debug mode.  <a href="host_8h_a121289284f9d397e326b13a012871a86.html#a121289284f9d397e326b13a012871a86">More...</a><br /></td></tr>
 <tr class="separator:a121289284f9d397e326b13a012871a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +168,10 @@ typedef struct <a class="el" href="struct__oe__enclave__setting__context__switch
 typedef struct <a class="el" href="struct__oe__enclave__setting.html">_oe_enclave_setting</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h.html#aa5524d17f26181051ab62f537331bece">oe_enclave_setting_t</a></td></tr>
 <tr class="memdesc:aa5524d17f26181051ab62f537331bece"><td class="mdescLeft">&#160;</td><td class="mdescRight">The uniform structure type containing a specific type of enclave setting. <br /></td></tr>
 <tr class="separator:aa5524d17f26181051ab62f537331bece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9871796e7df6ee208cc022fda0dc61"><td class="memItemLeft" align="right" valign="top"><a id="a8a9871796e7df6ee208cc022fda0dc61"></a>
+typedef struct <a class="el" href="struct__oe__ecall__info__t.html">_oe_ecall_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h.html#a8a9871796e7df6ee208cc022fda0dc61">oe_ecall_info_t</a></td></tr>
+<tr class="memdesc:a8a9871796e7df6ee208cc022fda0dc61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure describing an ecall. <br /></td></tr>
+<tr class="separator:a8a9871796e7df6ee208cc022fda0dc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -170,12 +182,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aefba90cf1b62ef2b429d0788a0b74885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="result_8h_a665b321371ddde31a06d04b28a223993.html#a665b321371ddde31a06d04b28a223993">oe_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h_aefba90cf1b62ef2b429d0788a0b74885.html#aefba90cf1b62ef2b429d0788a0b74885">oe_create_enclave</a> (const char *path, <a class="el" href="types_8h.html#a5e75cffda7be3d8c8964c965cc03c096">oe_enclave_type_t</a> type, uint32_t flags, const <a class="el" href="host_8h.html#aa5524d17f26181051ab62f537331bece">oe_enclave_setting_t</a> *settings, uint32_t setting_count, const <a class="el" href="host_8h.html#a645669ffcdac9151b3c3d637111b349f">oe_ocall_func_t</a> *ocall_table, uint32_t ocall_count, <a class="el" href="types_8h_acb9a002e429e9071300cbcf31f388689.html#acb9a002e429e9071300cbcf31f388689">oe_enclave_t</a> **enclave)</td></tr>
-<tr class="memdesc:aefba90cf1b62ef2b429d0788a0b74885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an enclave from an enclave image file.  <a href="host_8h_aefba90cf1b62ef2b429d0788a0b74885.html#aefba90cf1b62ef2b429d0788a0b74885">More...</a><br /></td></tr>
-<tr class="separator:aefba90cf1b62ef2b429d0788a0b74885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ffd8331a318431abb0f61525bccd75c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="result_8h_a665b321371ddde31a06d04b28a223993.html#a665b321371ddde31a06d04b28a223993">oe_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h_a0ffd8331a318431abb0f61525bccd75c.html#a0ffd8331a318431abb0f61525bccd75c">oe_join_threads_created_inside_enclave</a> (<a class="el" href="types_8h_acb9a002e429e9071300cbcf31f388689.html#acb9a002e429e9071300cbcf31f388689">oe_enclave_t</a> *enclave)</td></tr>
-<tr class="memdesc:a0ffd8331a318431abb0f61525bccd75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Join all threads that have been created from inside the enclave.  <a href="host_8h_a0ffd8331a318431abb0f61525bccd75c.html#a0ffd8331a318431abb0f61525bccd75c">More...</a><br /></td></tr>
-<tr class="separator:a0ffd8331a318431abb0f61525bccd75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa2975824b98555d061ba66e92a0627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="result_8h_a665b321371ddde31a06d04b28a223993.html#a665b321371ddde31a06d04b28a223993">oe_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h_aefa2975824b98555d061ba66e92a0627.html#aefa2975824b98555d061ba66e92a0627">oe_create_enclave</a> (const char *path, <a class="el" href="types_8h.html#a5e75cffda7be3d8c8964c965cc03c096">oe_enclave_type_t</a> type, uint32_t flags, const <a class="el" href="host_8h.html#aa5524d17f26181051ab62f537331bece">oe_enclave_setting_t</a> *settings, uint32_t setting_count, const <a class="el" href="host_8h.html#a645669ffcdac9151b3c3d637111b349f">oe_ocall_func_t</a> *ocall_table, uint32_t ocall_count, const <a class="el" href="host_8h.html#a8a9871796e7df6ee208cc022fda0dc61">oe_ecall_info_t</a> *ecall_name_table, uint32_t ecall_count, <a class="el" href="types_8h_acb9a002e429e9071300cbcf31f388689.html#acb9a002e429e9071300cbcf31f388689">oe_enclave_t</a> **enclave)</td></tr>
+<tr class="memdesc:aefa2975824b98555d061ba66e92a0627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an enclave from an enclave image file.  <a href="host_8h_aefa2975824b98555d061ba66e92a0627.html#aefa2975824b98555d061ba66e92a0627">More...</a><br /></td></tr>
+<tr class="separator:aefa2975824b98555d061ba66e92a0627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a373a94cb9d2152c453a8c71e3d607e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="result_8h_a665b321371ddde31a06d04b28a223993.html#a665b321371ddde31a06d04b28a223993">oe_result_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="host_8h_a373a94cb9d2152c453a8c71e3d607e3f.html#a373a94cb9d2152c453a8c71e3d607e3f">oe_terminate_enclave</a> (<a class="el" href="types_8h_acb9a002e429e9071300cbcf31f388689.html#acb9a002e429e9071300cbcf31f388689">oe_enclave_t</a> *enclave)</td></tr>
 <tr class="memdesc:a373a94cb9d2152c453a8c71e3d607e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate an enclave and reclaims its resources.  <a href="host_8h_a373a94cb9d2152c453a8c71e3d607e3f.html#a373a94cb9d2152c453a8c71e3d607e3f">More...</a><br /></td></tr>
 <tr class="separator:a373a94cb9d2152c453a8c71e3d607e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
